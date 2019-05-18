@@ -25,5 +25,5 @@ class Prediction(Resource):
         global graph
         with graph.as_default():
             img_array = self.model.predict(img_array)
-        output = {'positive_probability':str(img_array[0][0]),'negative_probability':str(img_array[0][1])}
+        output = {'positive_probability':str(img_array[0][1]),'negative_probability':str(img_array[0][0])}
         return output
